@@ -10,12 +10,13 @@ angular.module('nodeTodo', [])
         .success(function(data) {
             $scope.todoData = data;
             console.log(data);
+
         })
         .error(function(error) {
             console.log('Error: ' + error);
         });
 
-        
+
 	// Create a new todo
 	$scope.createTodo = function(todoID) {
 	    $http.post('/api/v1/todos', $scope.formData)
@@ -23,6 +24,7 @@ angular.module('nodeTodo', [])
 	            $scope.formData = {};
 	            $scope.todoData = data;
 	            console.log(data);
+
 	        })
 	        .error(function(error) {
 	            console.log('Error: ' + error);

@@ -7,7 +7,6 @@ var connectionString = require(path.join(__dirname, '../', '../', '../','config'
 router.post('/api/v1/todos', function(req, res) {
 
     var results = [];
-
     // Grab data from http request
     var data = {text: req.body.text, complete: false};
 
